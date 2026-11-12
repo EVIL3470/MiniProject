@@ -1,0 +1,342 @@
+===== Priority Based Task Manager =====
+ 1. Add Task
+ 2. View Tasks
+ 3. Execute Highest Priority Task
+ 4. Edit Task
+ 5. Delete Task
+ 6. Search Tasks
+ 7. View Completed Tasks
+ 8. Upload File & Perform Tasks
+ 9. Generate Report
+10. Undo Last Action
+11. Filter Tasks
+12. Export to CSV
+13. Algorithm Lab
+14. Exit
+Enter choice: 
+--- Upload File & Perform Tasks ---
+File format (CSV or TXT): one task per line ->  id,name,priority,deadline
+JSON files are also supported.
+Default file: <project folder>/sample-data/sample_tasks.csv
+Path of the file to upload (press Enter to use the default): 
+Imported 10 task(s), skipped 0.
+
+Imported tasks in the order they will be performed:
+#   ID       Task                       Priority      Deadline      Status
+----------------------------------------------------------------------------------
+1   S4       Pay college fees           5 (Critical)  10 Nov 2026   OVERDUE by 2 day(s)
+2   S1       Prepare project presen...  5 (Critical)  14 Nov 2026
+3   S7       Write mini project report  5 (Critical)  14 Nov 2026
+4   S2       Submit lab record          4 (High)      12 Nov 2026   DUE TODAY
+5   S8       Prepare for viva           4 (High)      18 Nov 2026
+6   S10      Book train tickets         3 (Medium)    13 Nov 2026   due tomorrow
+7   S3       Revise data structures...  3 (Medium)    20 Nov 2026
+8   S6       Team meeting minutes       2 (Low)       13 Nov 2026   due tomorrow
+9   S9       Update GitHub README       2 (Low)       25 Nov 2026
+10  S5       Clean up desktop files     1 (Very Low)  No deadline
+
+Perform these tasks now? (y/n): Tasks kept as pending. Use option 3 to execute them one by one.
+
+[menu]
+Enter choice: 
+Pending Tasks (10) - in execution order:
+#   ID       Task                       Priority      Deadline      Status
+----------------------------------------------------------------------------------
+1   S4       Pay college fees           5 (Critical)  10 Nov 2026   OVERDUE by 2 day(s)
+2   S1       Prepare project presen...  5 (Critical)  14 Nov 2026
+3   S7       Write mini project report  5 (Critical)  14 Nov 2026
+4   S2       Submit lab record          4 (High)      12 Nov 2026   DUE TODAY
+5   S8       Prepare for viva           4 (High)      18 Nov 2026
+6   S10      Book train tickets         3 (Medium)    13 Nov 2026   due tomorrow
+7   S3       Revise data structures...  3 (Medium)    20 Nov 2026
+8   S6       Team meeting minutes       2 (Low)       13 Nov 2026   due tomorrow
+9   S9       Update GitHub README       2 (Low)       25 Nov 2026
+10  S5       Clean up desktop files     1 (Very Low)  No deadline
+
+Next up: S4 - Pay college fees
+
+[menu]
+Enter choice: 
+Search text (word or start of a word in task ID or name): 
+2 match(es), found with the trie:
+#   ID       Task                       Priority      Deadline      Status
+----------------------------------------------------------------------------------
+1   S1       Prepare project presen...  5 (Critical)  14 Nov 2026
+2   S8       Prepare for viva           4 (High)      18 Nov 2026
+
+[menu]
+Enter choice: 
+Search text (word or start of a word in task ID or name): 
+1 match(es), found by scanning (no word starts with that text):
+#   ID       Task                       Priority      Deadline      Status
+----------------------------------------------------------------------------------
+1   S1       Prepare project presen...  5 (Critical)  14 Nov 2026
+
+[menu]
+Enter choice: 
+Filter by:  1. Priority   2. Overdue only   3. Due within N days
+Enter choice: Number of days: 
+6 task(s):
+#   ID       Task                       Priority      Deadline      Status
+----------------------------------------------------------------------------------
+1   S4       Pay college fees           5 (Critical)  10 Nov 2026   OVERDUE by 2 day(s)
+2   S1       Prepare project presen...  5 (Critical)  14 Nov 2026
+3   S7       Write mini project report  5 (Critical)  14 Nov 2026
+4   S2       Submit lab record          4 (High)      12 Nov 2026   DUE TODAY
+5   S10      Book train tickets         3 (Medium)    13 Nov 2026   due tomorrow
+6   S6       Team meeting minutes       2 (Low)       13 Nov 2026   due tomorrow
+
+[menu]
+Enter choice: 
+Enter ID of the task to edit: Press Enter to keep the current value.
+Task Name [Clean up desktop files]: Priority (1-5, 5 = most urgent) [1]: Deadline (DD-MM-YYYY) [No deadline] (type 'none' to remove): Task updated.
+
+[menu]
+Enter choice: 
+Executing highest priority task:
+  ID       : S4
+  Task     : Pay college fees
+  Priority : 5 (Critical)
+  Deadline : 10 Nov 2026
+  Note     : this task was OVERDUE by 2 day(s)
+Task marked as completed.
+
+[menu]
+Enter choice: 
+Executing highest priority task:
+  ID       : S1
+  Task     : Prepare project presentation
+  Priority : 5 (Critical)
+  Deadline : 14 Nov 2026
+Task marked as completed.
+
+[menu]
+Enter choice: 
+Undone: Execute task S1.  (3 more action(s) can be undone)
+
+[menu]
+Enter choice: 
+Enter ID of the task to delete: Delete 'Update GitHub README'? (y/n): Task deleted. (You can bring it back with Undo.)
+
+[menu]
+Enter choice: 
+Undone: Delete task S9.  (3 more action(s) can be undone)
+
+[menu]
+Enter choice: 
+--- Upload File & Perform Tasks ---
+File format (CSV or TXT): one task per line ->  id,name,priority,deadline
+JSON files are also supported.
+Default file: <project folder>/sample-data/sample_tasks.csv
+Path of the file to upload (press Enter to use the default): 
+Imported 2 task(s), skipped 5.
+  Skipped - Row 2 (E2): priority must be a whole number from 1 to 5
+  Skipped - Row 3: ID and name are required
+  Skipped - Row 4 (E3): ID and name are required
+  Skipped - Row 5 (E4): invalid deadline '31-02-2026'
+  Skipped - Row 6 (E1): duplicate ID
+
+Imported tasks in the order they will be performed:
+#   ID       Task                       Priority      Deadline      Status
+----------------------------------------------------------------------------------
+1   E1       Valid task with a dead...  3 (Medium)    30 Nov 2026
+2   E5       Valid task without a d...  1 (Very Low)  No deadline
+
+Perform these tasks now? (y/n): 
+Performing tasks...
+  [1/2] Done: E1 - Valid task with a deadline (Priority 3, 30 Nov 2026)
+  [2/2] Done: E5 - Valid task without a deadline (Priority 1, No deadline)
+
+All 2 imported task(s) performed and marked as completed.
+
+[menu]
+Enter choice: 
+Completed Tasks (3):
+ID       Task                         Priority   Completed On  Result
+----------------------------------------------------------------------------------
+S4       Pay college fees             5          12 Nov 2026   LATE
+E1       Valid task with a deadline   3          12 Nov 2026   on time
+E5       Valid task without a deadli  1          12 Nov 2026   -
+
+[menu]
+Enter choice: 
+==================================================================================
+                       PRIORITY BASED TASK MANAGER - REPORT                       
+                        Generated on 12 Nov 2026, 03:05 AM                        
+==================================================================================
+
+SUMMARY
+----------------------------------------------------------------------------------
+Total tasks                    : 12
+Pending                        : 9
+Completed                      : 3
+Completion rate                : 25.0%
+Completed on time              : 1 of 2
+Overdue                        : 0
+Due today                      : 1
+Pending, no deadline           : 0
+
+PENDING TASKS BY PRIORITY
+----------------------------------------------------------------------------------
+5 (Critical)  : ## 2
+4 (High)      : ## 2
+3 (Medium)    : ### 3
+2 (Low)       : ## 2
+1 (Very Low)  :  0
+
+PENDING TASKS (in execution order)
+----------------------------------------------------------------------------------
+1   S1       Prepare project presen...  5 (Critical)  14 Nov 2026
+2   S7       Write mini project report  5 (Critical)  14 Nov 2026
+3   S2       Submit lab record          4 (High)      12 Nov 2026   DUE TODAY
+4   S8       Prepare for viva           4 (High)      18 Nov 2026
+5   S10      Book train tickets         3 (Medium)    13 Nov 2026   due tomorrow
+6   S3       Revise data structures...  3 (Medium)    20 Nov 2026
+7   S5       Clean up desktop files     3 (Medium)    20 Nov 2026
+8   S6       Team meeting minutes       2 (Low)       13 Nov 2026   due tomorrow
+9   S9       Update GitHub README       2 (Low)       25 Nov 2026
+
+COMPLETED TASKS
+----------------------------------------------------------------------------------
+S4       Pay college fees             5          12 Nov 2026   LATE
+E1       Valid task with a deadline   3          12 Nov 2026   on time
+E5       Valid task without a deadli  1          12 Nov 2026   -
+
+==================================================================================
+                                  End of report                                   
+==================================================================================
+
+Report saved to: <project folder>/output/report_YYYYMMDD_HHMMSS.txt
+
+[menu]
+Enter choice: 
+Exported to: <project folder>/output/tasks_export_YYYYMMDD_HHMMSS.csv
+
+[menu]
+Enter choice: 
+===== Algorithm Lab =====
+1. Heap visualiser (step by step)
+2. Benchmark: heap vs simpler structures
+3. Back
+Enter choice: 
+--- Heap visualiser ---
+Key = (-priority, deadline, order).  The smallest key sits at the root.
+A(p3) means task A with priority 3. Equal priorities are broken by deadline,
+then by the order in which the tasks were added.
+PUSH adds the task at the bottom and swaps it upwards while it beats its parent.
+POP swaps the root with the last task, cuts it off, then swaps the new root
+downwards until the heap order is restored.
+
+PUSH A(p3)   deadline=2026-11-20
+  array : [A(p3)]
+  tree  :
+                                  A(p3)                               
+
+PUSH B(p5)   deadline=2026-11-25
+  array : [B(p5), A(p3)]
+  tree  :
+                                  B(p5)                               
+                                  A(p3)                               
+  swaps : swap A <-> B
+
+PUSH C(p5)   deadline=2026-11-15
+  array : [C(p5), A(p3), B(p5)]
+  tree  :
+                                  C(p5)                               
+                               A(p3)  B(p5)                           
+  swaps : swap B <-> C
+
+PUSH D(p1)   deadline=none
+  array : [C(p5), A(p3), B(p5), D(p1)]
+  tree  :
+                                  C(p5)                               
+                               A(p3)  B(p5)                           
+                                  D(p1)                               
+
+PUSH E(p4)   deadline=2026-11-18
+  array : [C(p5), E(p4), B(p5), D(p1), A(p3)]
+  tree  :
+                                  C(p5)                               
+                               E(p4)  B(p5)                           
+                               D(p1)  A(p3)                           
+  swaps : swap A <-> E
+
+PUSH F(p5)   deadline=2026-11-15
+  array : [C(p5), E(p4), F(p5), D(p1), A(p3), B(p5)]
+  tree  :
+                                  C(p5)                               
+                               E(p4)  F(p5)                           
+                           D(p1)  A(p3)  B(p5)                        
+  swaps : swap B <-> F
+
+POP  -> C(p5)   (highest priority task leaves first)
+  array : [F(p5), E(p4), B(p5), D(p1), A(p3)]
+  tree  :
+                                  F(p5)                               
+                               E(p4)  B(p5)                           
+                               D(p1)  A(p3)                           
+  swaps : swap B <-> C; swap F <-> B
+
+POP  -> F(p5)   (highest priority task leaves first)
+  array : [B(p5), E(p4), A(p3), D(p1)]
+  tree  :
+                                  B(p5)                               
+                               E(p4)  A(p3)                           
+                                  D(p1)                               
+  swaps : swap A <-> F; swap B <-> A
+
+POP  -> B(p5)   (highest priority task leaves first)
+  array : [E(p4), D(p1), A(p3)]
+  tree  :
+                                  E(p4)                               
+                               D(p1)  A(p3)                           
+  swaps : swap D <-> B; swap E <-> D
+
+POP  -> E(p4)   (highest priority task leaves first)
+  array : [A(p3), D(p1)]
+  tree  :
+                                  A(p3)                               
+                                  D(p1)                               
+  swaps : swap A <-> E
+
+POP  -> A(p3)   (highest priority task leaves first)
+  array : [D(p1)]
+  tree  :
+                                  D(p1)                               
+  swaps : swap D <-> A
+
+POP  -> D(p1)   (highest priority task leaves first)
+  array : []
+  tree  :
+
+
+===== Algorithm Lab =====
+1. Heap visualiser (step by step)
+2. Benchmark: heap vs simpler structures
+3. Back
+Enter choice: 
+--- Benchmark: push n tasks, then execute all of them ---
+Compared structures:
+  Indexed heap (ours)   push O(log n), pop O(log n)
+  Python heapq          same idea, written in C (shows the best case)
+  Sorted list           bisect.insort: push O(n), pop O(n) (list shift, fast in C)
+  Unsorted list         push O(1), pop O(n) (scan for the maximum)
+
+      n |  Indexed heap |     heapq |  Sorted list |  Unsorted list
+-------------------------------------------------------------------
+   1000 |       0.005 s |   0.001 s |      0.000 s |        0.019 s
+   4000 |       0.028 s |   0.005 s |      0.016 s |        0.307 s
+  16000 |       0.177 s |   0.022 s |      0.311 s |        skipped
+
+How to read this: when n grows 4x, the heap time grows a little over 4x
+(n log n), while the unsorted list grows about 16x (n squared).
+heapq is faster only because it is implemented in C, not because of a
+better algorithm.
+
+
+===== Algorithm Lab =====
+1. Heap visualiser (step by step)
+2. Benchmark: heap vs simpler structures
+3. Back
+Enter choice: [menu]
+Enter choice: Thank You

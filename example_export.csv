@@ -1,0 +1,13 @@
+status,id,name,priority,deadline,completed_on
+pending,S1,Prepare project presentation,5,2026-11-14,
+pending,S7,Write mini project report,5,2026-11-14,
+pending,S2,Submit lab record,4,2026-11-12,
+pending,S8,Prepare for viva,4,2026-11-18,
+pending,S10,Book train tickets,3,2026-11-13,
+pending,S3,Revise data structures notes,3,2026-11-20,
+pending,S5,Clean up desktop files,3,2026-11-20,
+pending,S6,Team meeting minutes,2,2026-11-13,
+pending,S9,Update GitHub README,2,2026-11-25,
+completed,S4,Pay college fees,5,2026-11-10,2026-11-12
+completed,E1,Valid task with a deadline,3,2026-11-30,2026-11-12
+completed,E5,Valid task without a deadline,1,,2026-11-12

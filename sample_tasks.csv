@@ -1,0 +1,11 @@
+id,name,priority,deadline
+S1,Prepare project presentation,5,14-11-2026
+S2,Submit lab record,4,12-11-2026
+S3,Revise data structures notes,3,20-11-2026
+S4,Pay college fees,5,10-11-2026
+S5,Clean up desktop files,1,
+S6,Team meeting minutes,2,2026-11-13
+S7,Write mini project report,5,14/11/2026
+S8,Prepare for viva,4,18-11-2026
+S9,Update GitHub README,2,25-11-2026
+S10,Book train tickets,3,13-11-2026

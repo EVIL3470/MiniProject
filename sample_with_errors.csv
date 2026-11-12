@@ -1,0 +1,8 @@
+id,name,priority,deadline
+E1,Valid task with a deadline,3,30-11-2026
+E2,Priority is too high,9,30-11-2026
+,Missing ID,2,
+E3,,2,
+E4,Bad date,2,31-02-2026
+E1,Duplicate of the first row,4,
+E5,Valid task without a deadline,1,
