@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+tasks.json
+tasks.json.tmp
+output/report_*.txt
+output/tasks_export_*.csv
